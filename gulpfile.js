@@ -8,21 +8,31 @@ var deploy      = require('gulp-gh-pages');
 var browserSync = require('browser-sync').create();
 
 gulp.task('html', function(){
-  return gulp.src('templates/*.pug')
+  return gulp.src('src/*.pug')
     .pipe(pug())
     .pipe(gulp.dest('dist/'))
     .pipe(browserSync.stream());
 });
 
 gulp.task('css', function(){
-  return gulp.src('templates/*.styl')
+  return gulp.src('src/*.styl')
     .pipe(stylus())
 //    .pipe(minifyCSS())
     .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.stream());
 });
 
-gulp.task('build', [ 'html', 'css']);
+gulp.task('img', function(){
+  return gulp.src('img/*.*')
+    .pipe(gulp.dest('dist/img'))
+});
+
+gulp.task('fonts', function(){
+  return gulp.src('fonts/*.*')
+    .pipe(gulp.dest('dist/fonts'))
+});
+
+gulp.task('build', [ 'html', 'css', 'img', 'fonts']);
 
 gulp.task('deploy', ['build'], function () {
   return gulp.src("./dist/**/*")
@@ -38,14 +48,14 @@ gulp.task('browser-sync', function() {
     });
 });
 
-gulp.task('serve', ['html', 'css'], function() {
+gulp.task('serve', ['build'], function() {
 
     browserSync.init({
         server: "./dist"
     });
 
-    gulp.watch("templates/**/*.styl", ['css']);
-    gulp.watch("templates/**.pug", ['html'])
+    gulp.watch("src/**/*.styl", ['css']);
+    gulp.watch("src/**.pug", ['html'])
     gulp.watch("dist/**/*.*").on('change', browserSync.reload);
 });
 

@@ -1,0 +1,70 @@
+@require 'fonts'
+
+*
+  box-sizing border-box
+  margin 0
+  padding 0
+
+h1, h2, h3
+  text-transform uppercase
+  font-family 'Conv_MyriadPro-Bold'
+body
+  font-family 'Conv_MyriadPro-Regular'
+  
+.wrapper
+  margin 0 auto
+  width: 58.5%
+  display: grid 
+  grid-gap: 7%
+  grid-template-columns: 0.6498422712933754fr 1fr
+  
+section
+  margin-bottom 50px
+  
+h2:before 
+  content ""
+  width: 75px
+  height: 75px
+  display inline-block
+  background-image: url(../img/profile.svg)
+  background-size: cover
+  bacground-repeat: no-repeat
+  
+h2
+  display grid
+  color: #056CB4
+  font-size 40px
+  letter-spacing .7px
+  grid-template-columns 75px max-content 1fr
+  align-items center
+  grid-gap 15px
+  margin-bottom:28px
+  
+h2:after
+  content ""
+  display: inline-block
+  border 2px solid #056CB4
+  height 0px
+h3 
+  font-size 25px
+  letter-spacing .4px
+.contact 
+  h2:before
+    background-image: url(../img/contact.svg)
+
+ul 
+  list-style none
+  margin-left 48px
+  
+li 
+  position relative
+li:before
+  content ""
+  display inline-block
+  position absolute
+  left -30px
+  top 3px
+  height: 20px
+  width: 20px
+  border-radius 50%
+  background-color #000000
