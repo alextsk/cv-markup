@@ -6,7 +6,9 @@
   "author": "Alex <user@nomail.com>",
   "license": "MIT",
   "devDependencies": {
+    "browser-sync": "^2.24.4",
     "gulp": "^3.9.1",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-pug": "^4.0.1",
     "gulp-stylus": "^2.7.0"
   }
