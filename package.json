@@ -1,0 +1,13 @@
+{
+  "name": "cv-markup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/alextsk/cv-markup.git",
+  "author": "Alex <user@nomail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-stylus": "^2.7.0"
+  }
+}
