@@ -5,6 +5,8 @@ var stylus = require('gulp-stylus');
 //var concat = require('gulp-concat');
 //var sourcemaps = require('gulp-sourcemaps');
 
+var deploy      = require('gulp-gh-pages');
+
 gulp.task('html', function(){
   return gulp.src('templates/*.pug')
     .pipe(pug())
@@ -19,3 +21,8 @@ gulp.task('css', function(){
 });
 
 gulp.task('default', [ 'html', 'css']);
+
+gulp.task('deploy', function () {
+  return gulp.src("./dist/**/*")
+    .pipe(deploy())
+});
