@@ -10,14 +10,14 @@ var deploy      = require('gulp-gh-pages');
 gulp.task('html', function(){
   return gulp.src('templates/*.pug')
     .pipe(pug())
-    .pipe(gulp.dest('build/html'))
+    .pipe(gulp.dest('dist/html'))
 });
 
 gulp.task('css', function(){
   return gulp.src('templates/*.styl')
     .pipe(stylus())
 //    .pipe(minifyCSS())
-    .pipe(gulp.dest('build/css'))
+    .pipe(gulp.dest('dist/css'))
 });
 
 gulp.task('default', [ 'html', 'css']);
