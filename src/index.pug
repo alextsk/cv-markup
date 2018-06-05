@@ -8,26 +8,27 @@ html(lang="en")
     .wrapper
       .left-side
         section.intro
-          h2 Name here
-          h1 Surname
-          P graphic designer
+          .intro__mugshot
+          h1.intro__name Name here
+          h1.intro__surname Surname
+          P.intro__profession graphic designer
         section.profile
-          h2 profile 
-          p 
-            |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque arcu, efficitur ut mi ut, feugiat efficitur nulla. Sed vel magna in arcu maximus egestas. Suspendisse consectetur sollicitudin lacus, ut tempus lorem hendrerit ut.
+          h2.section-head.profile__head profile 
+          p.profile__description 
+            |Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. 
         section.contact
-          h2 contact
-          dl
-            dt Address
-            dd Main Street, City
-            dt e-mail
-            dd contact@domain.com
-            dt phone
-            dd 555-555-555
-            dt website
-            dd www.yourweb.com
+          h2.section-head.contact__head contact
+          dl.contact__list.list
+            dt.contact__key Address
+            dd.contact__value Main Street, City
+            dt.contact__key e-mail
+            dd.contact__value contact@domain.com
+            dt.contact__key phone
+            dd.contact__value 555-555-555
+            dt.contact__key website
+            dd.contact__value www.yourweb.com
         section.skills
-          h2 skills
+          h2.section-head.skills__head skills
           ul
             li
               .title Creative
@@ -43,46 +44,52 @@ html(lang="en")
               .graph ***********
       .right-side
         section.education
-          h2 education
-          ul
-            li
+          h2.section-head.education__head education
+          ul.education__list.bullet-list
+            li.education__item.bullet-list__item
               h3.title Master degree
               .time-interval Feb 2011 - Jun 2014
               .univer-name University name
               .desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque arcu, efficitur ut mi ut, feugiat efficitur nulla. Sed vel magna in arcu maximus egestas. Suspendisse consectetur sollicitudin lacus, ut tempus lorem hendrerit ut.
 
-            li
+            li.education__item.bullet-list__item
               h3.title Master degree
               .time-interval Feb 2011 - Jun 2014
               .univer-name University name
               .desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque arcu, efficitur ut mi ut, feugiat efficitur nulla. Sed vel magna in arcu maximus egestas. Suspendisse consectetur sollicitudin lacus, ut tempus lorem hendrerit ut.
 
-            li
+            li.education__item.bullet-list__item
+              h3.title Master degree
+              .time-interval Feb 2011 - Jun 2014
+              .univer-name University name
+              .desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque arcu, efficitur ut mi ut, feugiat efficitur nulla. Sed vel magna in arcu maximus egestas. Suspendisse consectetur sollicitudin lacus, ut tempus lorem hendrerit ut.
+              
+            li.education__item.bullet-list__item
               h3.title Master degree
               .time-interval Feb 2011 - Jun 2014
               .univer-name University name
               .desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque arcu, efficitur ut mi ut, feugiat efficitur nulla. Sed vel magna in arcu maximus egestas. Suspendisse consectetur sollicitudin lacus, ut tempus lorem hendrerit ut.
         section.experience
-          h2 experience
-          ul
-            li
+          h2.section-head.experience__head experience
+          ul.experience__list.bullet-list
+            li.experience__item.bullet-list__item
               h3.title Company name
               .time-interval Feb 2011 - Jun 2014
               .position Your job here
               .desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque arcu, efficitur ut mi ut, feugiat efficitur nulla. Sed vel magna in arcu maximus egestas. Suspendisse consectetur sollicitudin lacus, ut tempus lorem hendrerit ut.       
-            li
-              .title Company name
+            li.experience__item.bullet-list__item
+              h3.title Company name
               .time-interval Feb 2011 - Jun 2014
               .position Your job here
               .desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque arcu, efficitur ut mi ut, feugiat efficitur nulla. Sed vel magna in arcu maximus egestas. Suspendisse consectetur sollicitudin lacus, ut tempus lorem hendrerit ut.       
-            li
-              .title Company name
+            li.experience__item.bullet-list__item
+              h3.title Company name
               .time-interval Feb 2011 - Jun 2014
               .position Your job here
               .desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque arcu, efficitur ut mi ut, feugiat efficitur nulla. Sed vel magna in arcu maximus egestas. Suspendisse consectetur sollicitudin lacus, ut tempus lorem hendrerit ut. 
 
         section.software
-          h2 software
+          h2.section-head.software__head software
           ul 
             li
               h3.title photoshop

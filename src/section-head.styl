@@ -1,0 +1,29 @@
+
+.section-head
+  display flex
+  color: var(--theme-blue)
+  font-size 40px
+  letter-spacing .7px
+  grid-template-columns 75px max-content 1fr
+  align-items center
+  justify-content space-between
+  margin-bottom: 25px
+
+  
+  &:before 
+    content ""
+    width: 75px
+    height: 75px
+    margin-right 13px 
+    display inline-block
+    background-image: url(../img/profile.svg)
+    background-size: cover
+    bacground-repeat: no-repeat
+    
+  &:after
+    content ""
+    display: inline-block
+    border 2px solid var(--theme-blue)
+    height 0px
+    margin-left 10px
+    flex 1
