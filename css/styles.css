@@ -178,3 +178,24 @@ h3 {
 .contact__value {
   font-size: 20px;
 }
+.skills {
+  margin-top: 20px;
+}
+.point {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 12px;
+  border-radius: 50%;
+  background-color: #e6e6e6;
+}
+.point.active {
+  background-color: #3d6cb0;
+}
+.bar {
+  height: 22px;
+  background-color: #e6e6e6;
+}
+.bar .percent {
+  background-color: #3d6cb0;
+}
