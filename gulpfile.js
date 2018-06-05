@@ -46,6 +46,7 @@ const deploy = gulp.series(build, function () {
     .pipe(gulpDeploy())
 });
 
+gulp.task('deploy', deploy)
 
 const browser = function() {
     browserSync.init({

@@ -3,7 +3,8 @@ html(lang="en")
   head
     link(type='text/css', rel='stylesheet', href='./css/styles.css')
     title  pageTitle
-
+  include mixins/points_mix.pug
+  include mixins/bar_mix.pug
   body
     .wrapper
       .left-side
@@ -32,16 +33,20 @@ html(lang="en")
           ul
             li
               .title Creative
-              .graph *********
+              .graph 
+                +points(6, 12)
             li
               .title Teamwork
-              .graph ***********
+              .graph 
+                +points(8, 12)
             li
               .title Innovate
-              .graph ******
+              .graph 
+                +points(3, 12)
             li
               .title Communication
-              .graph ***********
+              .graph 
+                +points(4, 12)
       .right-side
         section.education
           h2.section-head.education__head education
@@ -63,7 +68,7 @@ html(lang="en")
               .time-interval Feb 2011 - Jun 2014
               .univer-name University name
               .desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque arcu, efficitur ut mi ut, feugiat efficitur nulla. Sed vel magna in arcu maximus egestas. Suspendisse consectetur sollicitudin lacus, ut tempus lorem hendrerit ut.
-              
+
             li.education__item.bullet-list__item
               h3.title Master degree
               .time-interval Feb 2011 - Jun 2014
@@ -93,19 +98,25 @@ html(lang="en")
           ul 
             li
               h3.title photoshop
-              .graph ||||||||||
+              .graph 
+                +bar(30)
             li
               h3.title illustrator
-              .graph ||||||||||
+              .graph 
+                +bar(50)
             li
               h3.title indesign
-              .graph ||||||||||
+              .graph 
+                +bar(88)
             li
               h3.title dreamweaver
-              .graph ||||||||||
+              .graph 
+                +bar(76)
             li
               h3.title after effects
-              .graph ||||||||||
+              .graph 
+                +bar(55)
             li
               h3.title html&css
-              .graph ||||||||||
+              .graph 
+                +bar(99)
