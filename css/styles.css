@@ -16,9 +16,22 @@
   list-style: none;
   margin-left: 56px;
 }
+.bullet-list__title {
+  display: inline-block;
+  font-size: 25px;
+  letter-spacing: 0.4px;
+}
+.bullet-list__interval {
+  display: inline-block;
+  font-size: 26px;
+  margin-left: 14px;
+}
+.bullet-list__interval:before {
+  content: "//";
+  margin-right: 6px;
+}
 .bullet-list__item {
   position: relative;
-  margin-bottom: 14px;
 }
 .bullet-list__item:before {
   content: "";
@@ -60,7 +73,7 @@
   flex: 1;
 }
 :root {
-  --theme-blue: #f56cb4;
+  --theme-blue: #056cb4;
 }
 * {
   box-sizing: border-box;
@@ -82,10 +95,6 @@ body {
   display: grid;
   grid-gap: 7%;
   grid-template-columns: 0.649842271293375fr 1fr;
-}
-h3 {
-  font-size: 25px;
-  letter-spacing: 0.4px;
 }
 .contact__head:before {
   background-image: url("../img/contact.svg");
@@ -179,7 +188,67 @@ h3 {
   font-size: 20px;
 }
 .skills {
-  margin-top: 20px;
+  margin-top: 45px;
+}
+.skills__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+}
+.skills__item {
+  margin-bottom: 18px;
+}
+.skills__item .title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 23px;
+  letter-spacing: 1.4px;
+  margin-bottom: 8px;
+}
+.education__univer-name {
+  text-transform: uppercase;
+  font-size: 25px;
+}
+.education__title {
+  color: var(--theme-blue);
+}
+.education__item {
+  margin-bottom: 12px;
+}
+.education__desc {
+  margin-top: 5px;
+}
+.experience {
+  margin-top: 54px;
+}
+.experience__list {
+  margin-top: 41px;
+}
+.experience__position {
+  text-transform: uppercase;
+  font-size: 25px;
+}
+.experience__item {
+  margin-bottom: 12px;
+}
+.experience__desc {
+  margin-top: 5px;
+}
+.software {
+  margin-top: 52px;
+}
+.software__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 35px 70px;
+}
+.software__title {
+  font-weight: 200;
+  font-size: 25px;
+  letter-spacing: 0.4px;
+  font-family: 'Conv_MyriadPro-Regular';
 }
 .point {
   display: inline-block;

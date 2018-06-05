@@ -2,9 +2,22 @@
   list-style: none;
   margin-left: 56px;
 }
+.bullet-list__title {
+  display: inline-block;
+  font-size: 25px;
+  letter-spacing: 0.4px;
+}
+.bullet-list__interval {
+  display: inline-block;
+  font-size: 26px;
+  margin-left: 14px;
+}
+.bullet-list__interval:before {
+  content: "//";
+  margin-right: 6px;
+}
 .bullet-list__item {
   position: relative;
-  margin-bottom: 14px;
 }
 .bullet-list__item:before {
   content: "";
