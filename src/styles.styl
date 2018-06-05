@@ -2,7 +2,7 @@
 @require 'bullet-list'
 @require 'section-head'
 :root 
-  --theme-blue #f56CB4
+  --theme-blue #056CB4
   
 *
   box-sizing border-box
@@ -26,9 +26,7 @@ body
   
   
   
-h3 
-  font-size 25px
-  letter-spacing .4px
+
  
 .contact__head:before
   background-image: url(../img/contact.svg)
@@ -117,7 +115,56 @@ h3
   font-size 20px
 
 .skills 
-  margin-top 20px
+  margin-top 45px
+  &__list
+    display flex
+    flex-direction column
+    align-items center
+    list-style none
+    
+  &__item
+    margin-bottom 18px
+    .title 
+      text-transform uppercase
+      text-align center
+      font-size 23px
+      letter-spacing 1.4px
+      margin-bottom 8px
+
+.education
+  &__univer-name
+    text-transform uppercase
+    font-size 25px
+  &__title 
+    color var(--theme-blue)
+  &__item
+    margin-bottom 12px
+  &__desc 
+    margin-top 5px
+    
+.experience
+  margin-top 54px
+  &__list
+    margin-top 41px
+  &__position
+    text-transform uppercase
+    font-size 25px
+  &__item
+    margin-bottom 12px
+  &__desc 
+    margin-top 5px
+.software
+  margin-top 52px
+  &__list
+    list-style none
+    display grid
+    grid-template-columns 1fr 1fr
+    grid-gap  35px 70px
+  &__title
+    font-weight 200
+    font-size 25px
+    letter-spacing .4px
+    font-family 'Conv_MyriadPro-Regular'
 
 .point 
   display inline-block

@@ -1,9 +1,19 @@
 .bullet-list 
   list-style none
   margin-left 56px
+  &__title 
+    display inline-block
+    font-size 25px
+    letter-spacing .4px
+  &__interval
+    display inline-block
+    font-size 26px
+    margin-left 14px
+    &:before 
+      content "//"
+      margin-right 6px
   &__item 
     position relative
-    margin-bottom 14px
     &:before
       content ""
       display inline-block
