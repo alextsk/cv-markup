@@ -1,0 +1,19 @@
+.bullet-list {
+  list-style: none;
+  margin-left: 56px;
+}
+.bullet-list__item {
+  position: relative;
+  margin-bottom: 14px;
+}
+.bullet-list__item:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: -42px;
+  top: 3px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #000;
+}
