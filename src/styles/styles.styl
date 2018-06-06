@@ -1,9 +1,13 @@
 @require 'fonts'
 @require 'bullet-list'
 @require 'section-head'
+
 :root 
   --theme-blue #056CB4
-$breakpoint = 892px
+  
+$md_breakpoint = 1200px
+$sm_breakpoint = 892px
+
 *
   box-sizing border-box
   margin 0
@@ -22,7 +26,9 @@ body
   display: grid 
   grid-gap: 7%
   grid-template-columns: 0.6498422712933754fr 1fr
-  @media screen and (max-width: $breakpoint)
+  @media screen and (max-width: $md_breakpoint)
+    width 70%
+  @media screen and (max-width: $sm_breakpoint)
     grid-template-columns: 1fr
     width: 90%
 
@@ -40,9 +46,6 @@ body
   background-image: url(../img/experience.svg)  
 
 
-
-
-  
 .intro__mugshot
   margin 0 auto
   width: 200px
@@ -50,7 +53,6 @@ body
   background-color var(--theme-blue)
   border-radius 50%
   position relative
-  
   &:before
     content ""
     position absolute
@@ -60,56 +62,56 @@ body
     left -16px
     top -16px
     border 1px solid var(--theme-blue)
+    
+      
 .intro
   margin-top 30px
   position relative
   left 10px
-.intro__name
-  text-align center
-  font-family 'Conv_MyriadPro-Regular'
-  font-size 54px
-  letter-spacing 2px
-  font-weight 100
-  line-height 0px
-  margin-top 72px
-.intro__surname
-  text-align center
-  font-weight bold
-  font-size 63px
-  margin-top 16px
-  letter-spacing -1px
-.intro__profession
-  text-align center
-  font-size 25px
-  text-transform uppercase
-  font-family 'Conv_MyriadPro-Bold'
+  @media screen and (max-width: $sm_breakpoint)
+    left 0
+  &__name
+    text-align center
+    font-family 'Conv_MyriadPro-Regular'
+    font-size 54px
+    letter-spacing 2px
+    font-weight 100
+    line-height 0px
+    margin-top 72px
+  &__surname
+    text-align center
+    font-weight bold
+    font-size 63px
+    margin-top 16px
+    letter-spacing -1px
+  &__profession
+    text-align center
+    font-size 25px
+    text-transform uppercase
+    font-family 'Conv_MyriadPro-Bold'
   
 .profile
   margin-top 72px
-  
-.profile__description
-  margin-top -13px
-  font-size 16px
-  line-height 1.184em
+  &__description
+    margin-top -13px
+    font-size 16px
+    line-height 1.184em
   
 .contact 
-  margin-top 34px
-  
-      
-.contact__list 
-  margin-top 29px
-  display grid
-  grid-gap 30px 10px
-  letter-spacing .6px
-  grid-template-columns: 1fr 2.35fr
-  
-.contact__key
-  font-size 20px
-  text-transform uppercase
-  color: var(--theme-blue)
-  font-weight 600
-.contact__value
-  font-size 20px
+  margin-top 34px   
+  &__list 
+    margin-top 29px
+    display grid
+    grid-gap 30px 10px
+    letter-spacing .6px
+    grid-template-columns: 1fr 2.35fr  
+  &__key
+    font-size 20px
+    text-transform uppercase
+    color: var(--theme-blue)
+    font-weight 600
+  &__value
+    font-size 20px
 
 .skills 
   margin-top 45px
@@ -117,8 +119,7 @@ body
     display flex
     flex-direction column
     align-items center
-    list-style none
-    
+    list-style none   
   &__item
     margin-bottom 18px
     .title 
@@ -129,7 +130,7 @@ body
       margin-bottom 8px
 
 .education
-  @media screen and (max-width: $breakpoint)
+  @media screen and (max-width: $sm_breakpoint)
     margin-top 40px
   &__univer-name
     text-transform uppercase
@@ -152,16 +153,19 @@ body
     margin-bottom 12px
   &__desc 
     margin-top 5px
+    
 .software
   margin-top 52px
   &__list
     list-style none
     display grid
+    margin -2px 8px 0
     grid-template-columns 1fr 1fr
-    grid-gap  35px 70px
+    grid-gap  22px 80px
   &__title
     font-weight 200
     font-size 25px
+    margin-bottom 13px
     letter-spacing .4px
     font-family 'Conv_MyriadPro-Regular'
 
@@ -169,10 +173,9 @@ body
   display inline-block
   width 18px
   height 18px
-  margin-right 12px
+  margin-right 9px
   border-radius 50%
-  background-color #e6e6e6
-  
+  background-color #e6e6e6  
   &.active
     background-color #3d6cb0
     

@@ -16,7 +16,7 @@ function html() {
 }
 
 function css() {
-  return gulp.src('src/*.styl')
+  return gulp.src('src/styles/*.styl')
     .pipe(stylus())
 //    .pipe(minifyCSS())
     .pipe(gulp.dest('dist/css'))
