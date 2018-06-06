@@ -3,7 +3,7 @@
 @require 'section-head'
 :root 
   --theme-blue #056CB4
-  
+$breakpoint = 892px
 *
   box-sizing border-box
   margin 0
@@ -22,12 +22,10 @@ body
   display: grid 
   grid-gap: 7%
   grid-template-columns: 0.6498422712933754fr 1fr
-  
-  
-  
-  
+  @media screen and (max-width: $breakpoint)
+    grid-template-columns: 1fr
+    width: 90%
 
- 
 .contact__head:before
   background-image: url(../img/contact.svg)
 .skills__head:before
@@ -90,7 +88,6 @@ body
   margin-top 72px
   
 .profile__description
-  color: red
   margin-top -13px
   font-size 16px
   line-height 1.184em
@@ -132,6 +129,8 @@ body
       margin-bottom 8px
 
 .education
+  @media screen and (max-width: $breakpoint)
+    margin-top 40px
   &__univer-name
     text-transform uppercase
     font-size 25px
