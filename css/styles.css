@@ -96,6 +96,17 @@ body {
   grid-gap: 7%;
   grid-template-columns: 0.649842271293375fr 1fr;
 }
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 892px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
+}
 .contact__head:before {
   background-image: url("../img/contact.svg");
 }
@@ -137,6 +148,11 @@ body {
   position: relative;
   left: 10px;
 }
+@media screen and (max-width: 892px) {
+  .intro {
+    left: 0;
+  }
+}
 .intro__name {
   text-align: center;
   font-family: 'Conv_MyriadPro-Regular';
@@ -163,7 +179,6 @@ body {
   margin-top: 72px;
 }
 .profile__description {
-  color: #f00;
   margin-top: -13px;
   font-size: 16px;
   line-height: 1.184em;
@@ -206,6 +221,11 @@ body {
   letter-spacing: 1.4px;
   margin-bottom: 8px;
 }
+@media screen and (max-width: 892px) {
+  .education {
+    margin-top: 40px;
+  }
+}
 .education__univer-name {
   text-transform: uppercase;
   font-size: 25px;
@@ -241,12 +261,14 @@ body {
 .software__list {
   list-style: none;
   display: grid;
+  margin: -2px 8px 0;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 35px 70px;
+  grid-gap: 22px 80px;
 }
 .software__title {
   font-weight: 200;
   font-size: 25px;
+  margin-bottom: 13px;
   letter-spacing: 0.4px;
   font-family: 'Conv_MyriadPro-Regular';
 }
@@ -254,7 +276,7 @@ body {
   display: inline-block;
   width: 18px;
   height: 18px;
-  margin-right: 12px;
+  margin-right: 9px;
   border-radius: 50%;
   background-color: #e6e6e6;
 }
