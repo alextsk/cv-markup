@@ -1,6 +1,8 @@
 var gulp = require('gulp');
 var pug = require('gulp-pug');
 var stylus = require('gulp-stylus');
+var data = require('gulp-data');
+const fs = require('fs');
 //var minifyCSS = require('gulp-csso');
 //var concat = require('gulp-concat');
 //var sourcemaps = require('gulp-sourcemaps');
@@ -10,6 +12,14 @@ var del = require('del');
 
 function html() {
   return gulp.src('src/*.pug')
+    .pipe(
+      data(function (file) { 
+        return { 
+          require: 
+          function(arg) { return JSON.parse(fs.readFileSync( arg )) }
+        } 
+      })
+    )
     .pipe(pug())
     .pipe(gulp.dest('dist/'))
     .pipe(browserSync.stream());
@@ -63,7 +73,8 @@ const serve = gulp.series(build, function() {
     });
 
     gulp.watch("src/**/*.styl", css);
-    gulp.watch("src/**.pug", html)
+    gulp.watch(["src/**/*.pug"], html)
+    gulp.watch(["src/**/*.json"], html)
     gulp.watch("dist/**/*.*").on('change', browserSync.reload);
 });
 
