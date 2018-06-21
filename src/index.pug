@@ -9,6 +9,7 @@ html(lang="en")
   include mixins/bar_mix.pug
   include components/definitions/definitions.pug
   include components/rating-dots/rating-dots.pug
+  include components/places/places.pug
 
   body
     .wrapper
@@ -32,48 +33,15 @@ html(lang="en")
       .right-side
         section.education
           h2.section-head.education__head education
-          ul.education__list.bullet-list
-            li.education__item.bullet-list__item
-              h3.education__title.bullet-list__title Master degree
-              .bullet-list__interval Feb 2011 - Jun 2014
-              .education__univer-name University name
-              .education__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque arcu, efficitur ut mi ut, feugiat efficitur nulla. Sed vel magna in arcu maximus egestas. Suspendisse consectetur sollicitudin lacus, ut tempus lorem hendrerit ut.
-
-            li.education__item.bullet-list__item
-              h3.education__title.bullet-list__title Master degree
-              .bullet-list__interval Feb 2011 - Jun 2014
-              .education__univer-name University name
-              .education__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque arcu, efficitur ut mi ut, feugiat efficitur nulla. Sed vel magna in arcu maximus egestas. Suspendisse consectetur sollicitudin lacus, ut tempus lorem hendrerit ut.
-
-            li.education__item.bullet-list__item
-              h3.education__title.bullet-list__title Master degree
-              .bullet-list__interval Feb 2011 - Jun 2014
-              .education__univer-name University name
-              .education__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque arcu, efficitur ut mi ut, feugiat efficitur nulla. Sed vel magna in arcu maximus egestas. Suspendisse consectetur sollicitudin lacus, ut tempus lorem hendrerit ut.
-
-            li.education__item.bullet-list__item
-              h3.education__title.bullet-list__title Master degree
-              .bullet-list__interval Feb 2011 - Jun 2014
-              .education__univer-name University name
-              .education__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque arcu, efficitur ut mi ut, feugiat efficitur nulla. Sed vel magna in arcu maximus egestas. Suspendisse consectetur sollicitudin lacus, ut tempus lorem hendrerit ut.
+          - var derived = data.education.map( i => ({title: i.degree, subtitle: i.univer, interval : i.interval, copy: i.copy}));
+          +places(derived, "education" )(title='emph')
+          
+         
         section.experience
           h2.section-head.experience__head experience
-          ul.experience__list.bullet-list
-            li.experience__item.bullet-list__item
-              h3.title.bullet-list__title Company name
-              .experience__time-interval.bullet-list__interval Feb 2011 - Jun 2014
-              .experience__position Your job here
-              .experience__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque arcu, efficitur ut mi ut, feugiat efficitur nulla. Sed vel magna in arcu maximus egestas. Suspendisse consectetur sollicitudin lacus, ut tempus lorem hendrerit ut.       
-            li.experience__item.bullet-list__item
-              h3.title.bullet-list__title Company name
-              .experience__time-interval.bullet-list__interval Feb 2011 - Jun 2014
-              .experience__position Your job here
-              .experience__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque arcu, efficitur ut mi ut, feugiat efficitur nulla. Sed vel magna in arcu maximus egestas. Suspendisse consectetur sollicitudin lacus, ut tempus lorem hendrerit ut.       
-            li.experience__item.bullet-list__item
-              h3.title.bullet-list__title Company name
-              .experience__time-interval.bullet-list__interval Feb 2011 - Jun 2014
-              .experience__position Your job here
-              .experience__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque arcu, efficitur ut mi ut, feugiat efficitur nulla. Sed vel magna in arcu maximus egestas. Suspendisse consectetur sollicitudin lacus, ut tempus lorem hendrerit ut. 
+          - var derived = data.experience.map( i => ({title: i.company, subtitle: i.job, interval : i.interval, copy: i.copy}));
+          +places(derived, "education")
+          
 
         section.software
           h2.section-head.software__head software
