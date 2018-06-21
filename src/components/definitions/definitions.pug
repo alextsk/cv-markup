@@ -1,0 +1,5 @@
+mixin definitions(defs, baseClass)
+  each val, key in defs
+    dl(class=baseClass + '__list').list
+      dt(class=baseClass + '__key')=key
+      dd(class=baseClass + '__value')=val
