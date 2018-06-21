@@ -8,6 +8,7 @@ html(lang="en")
   include mixins/points_mix.pug
   include mixins/bar_mix.pug
   include components/definitions/definitions.pug
+  include components/rating-dots/rating-dots.pug
 
   body
     .wrapper
@@ -26,23 +27,8 @@ html(lang="en")
           +definitions(data.contacts, "contact")  
         section.skills
           h2.section-head.skills__head skills
-          ul.skills__list
-            li.skills__item
-              .title Creative
-              .graph 
-                +points(6, 12)
-            li.skills__item
-              .title Teamwork
-              .graph 
-                +points(8, 12)
-            li.skills__item
-              .title Innovate
-              .graph 
-                +points(3, 12)
-            li.skills__item
-              .title Communication
-              .graph 
-                +points(4, 12)
+          +ratingDots(data.skills, "skills")
+          
       .right-side
         section.education
           h2.section-head.education__head education

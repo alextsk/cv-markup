@@ -1,7 +1,7 @@
 mixin points(num, of)
   - for (var x = 0; x < of; x++)
-    - num--
     if num > 0
       span.point.active
     else
       span.point 
+    - num--

@@ -1,0 +1,9 @@
+include ../../mixins/points_mix.pug
+
+mixin ratingDots(arr, baseClass)
+  ul.skills__list
+    each val, key in arr
+      li(class=baseClass + "__item")
+        .title=key
+        .graph 
+          +points(val, 12)
