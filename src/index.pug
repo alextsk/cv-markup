@@ -4,7 +4,7 @@ html(lang="en")
     link(type='text/css', rel='stylesheet', href='./css/styles.css')
     title  pageTitle
   - var data = require("./src/data.json");
-
+  
   include mixins/points_mix.pug
   include mixins/bar_mix.pug
   include components/definitions/definitions.pug
@@ -26,7 +26,8 @@ html(lang="en")
              
         section.contact
           h2.section-head.contact__head contact
-          +definitions(data.contacts, "contact")  
+          +definitions(data.contacts, "contact")
+
         section.skills
           h2.section-head.skills__head skills
           +ratingDots(data.skills, "skills")

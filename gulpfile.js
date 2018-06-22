@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var pug = require('gulp-pug');
 var stylus = require('gulp-stylus');
+var originalStylus = require('gulp-stylus').stylus
 var data = require('gulp-data');
 const fs = require('fs');
 //var minifyCSS = require('gulp-csso');
@@ -16,7 +17,16 @@ function html() {
       data(function (file) { 
         return { 
           require: 
-          function(arg) { return JSON.parse(fs.readFileSync( arg )) }
+            function(arg) { return JSON.parse(fs.readFileSync( arg)) },
+          loadStyle:
+            function(path, globalVar) {
+              console.log(originalStylus) 
+              return (
+                originalStylus(fs.readFileSync( path, "utf8" ))
+                .define('external', globalVar) //IDEA rewrite to iteration over an obj with muiltiple define(key, value)
+                .render()
+              )
+            }
         } 
       })
     )
@@ -73,7 +83,7 @@ const serve = gulp.series(build, function() {
     });
 
     gulp.watch("src/**/*.styl", css);
-    gulp.watch(["src/**/*.pug"], html)
+    gulp.watch(["src/**/*.pug", "src/**/*.styl"], html)
     gulp.watch(["src/**/*.json"], html)
     gulp.watch("dist/**/*.*").on('change', browserSync.reload);
 });
