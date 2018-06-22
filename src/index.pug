@@ -10,6 +10,7 @@ html(lang="en")
   include components/definitions/definitions.pug
   include components/rating-dots/rating-dots.pug
   include components/places/places.pug
+  include components/rating-bars/rating-bars.pug
 
   body
     .wrapper
@@ -45,28 +46,5 @@ html(lang="en")
 
         section.software
           h2.section-head.software__head software
-          ul.software__list
-            li
-              h3.software__title photoshop
-              .graph 
-                +bar(30)
-            li
-              h3.software__title dreamweaver
-              .graph 
-                +bar(76)
-            li
-              h3.software__title illustrator
-              .graph 
-                +bar(50)
-            li
-              h3.software__title after effects
-              .graph 
-                +bar(55)
-            li
-              h3.software__title indesign
-              .graph 
-                +bar(88)
-            li
-              h3.software__title html&css
-              .graph 
-                +bar(99)
+          +ratingBars(data.software, "software")
+          
