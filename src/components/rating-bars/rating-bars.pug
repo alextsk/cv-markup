@@ -1,9 +1,11 @@
 include ../../mixins/bar_mix.pug
 
 mixin ratingBars(arr, baseClass)
- ul(class=baseClass + "__list")
-  each val, key in arr
-    li
-      h3(class=baseClass + "__title")=key
-      .graph 
-        +bar(val)
+  - var defStyle = loadStyle("src/components/rating-bars/rating-bars.styl", baseClass);
+  style=defStyle
+  ul(class=baseClass + "__list")
+    each val, key in arr
+      li
+        h3(class=baseClass + "__title")=key
+        .graph 
+          +bar(val)

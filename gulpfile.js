@@ -4,6 +4,7 @@ var stylus = require('gulp-stylus');
 var originalStylus = require('gulp-stylus').stylus
 var data = require('gulp-data');
 const fs = require('fs');
+var path = require('path');
 //var minifyCSS = require('gulp-csso');
 //var concat = require('gulp-concat');
 //var sourcemaps = require('gulp-sourcemaps');
@@ -19,11 +20,11 @@ function html() {
           require: 
             function(arg) { return JSON.parse(fs.readFileSync( arg)) },
           loadStyle:
-            function(path, globalVar) {
-              console.log(originalStylus) 
+            function(arg, globalVar) {
+              console.log(path.dirname(arg)) // how to resolve relative paths to where the function was called?
               return (
-                originalStylus(fs.readFileSync( path, "utf8" ))
-                .define('external', globalVar) //IDEA rewrite to iteration over an obj with muiltiple define(key, value)
+                originalStylus(fs.readFileSync( arg, "utf8" ))
+                .define('external', globalVar) //IDEA rewrite to iteration over an obj with muiltiple define(kegy, value)
                 .render()
               )
             }
