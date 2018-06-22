@@ -5,8 +5,8 @@
 :root 
   --theme-blue #056CB4
   
-$md_breakpoint = 1200px
-$sm_breakpoint = 892px
+$md_breakpoint = 1100px
+$sm_breakpoint = 900px
 
 *
   box-sizing border-box
@@ -15,6 +15,7 @@ $sm_breakpoint = 892px
 
 h1, h2, h3
   text-transform uppercase
+  white-space nowrap
   font-family 'Conv_MyriadPro-Bold'
 body
   font-family 'Conv_MyriadPro-Regular'
@@ -27,10 +28,10 @@ body
   grid-gap: 7%
   grid-template-columns: 0.6498422712933754fr 1fr
   @media screen and (max-width: $md_breakpoint)
-    width 70%
+    width 90%
   @media screen and (max-width: $sm_breakpoint)
     grid-template-columns: 1fr
-    width: 90%
+    width: 94%
 
 .contact__head:before
   background-image: url(../img/contact.svg)
