@@ -70,6 +70,7 @@ body
   margin-top 30px
   position relative
   left 10px
+  text-transform uppercase
   @media screen and (max-width: $sm_breakpoint)
     left 0
   &__name
@@ -78,14 +79,21 @@ body
     font-size 54px
     letter-spacing 2px
     font-weight 100
-    line-height 0px
-    margin-top 72px
+    line-height 100%
+    margin-top 46px
   &__surname
     text-align center
     font-weight bold
     font-size 63px
-    margin-top 16px
+    margin-top 1px
     letter-spacing -1px
+    line-height 77%
+    font-family 'Conv_MyriadPro-Bold'
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
+    word-break: break-word;
+    hyphens: auto;
   &__profession
     text-align center
     font-size 25px

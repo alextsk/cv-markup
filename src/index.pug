@@ -1,25 +1,24 @@
+- var data = require("./src/data.json");
+include mixins/points_mix.pug
+include mixins/bar_mix.pug
+include components/definitions/definitions.pug
+include components/rating-dots/rating-dots.pug
+include components/places/places.pug
+include components/rating-bars/rating-bars.pug
 doctype html
 html(lang="en")
     head
+        meta(charset="utf-8")
         link(type='text/css', rel='stylesheet', href='./css/styles.css')
-        title  pageTitle
-    - var data = require("./src/data.json");
-    
-    include mixins/points_mix.pug
-    include mixins/bar_mix.pug
-    include components/definitions/definitions.pug
-    include components/rating-dots/rating-dots.pug
-    include components/places/places.pug
-    include components/rating-bars/rating-bars.pug
-
+        title=data.surname + ' ' + data.name
     body
         .wrapper
             .left-side
                 section.intro
                     .intro__mugshot
-                    h1.intro__name Name here
-                    h1.intro__surname Surname
-                    P.intro__profession graphic designer
+                    .intro__name=data.name
+                    .intro__surname=data.surname
+                    p.intro__profession=data.profession
                 section.profile
                     h2.section-head.profile__head profile 
                     p.profile__description=data.profileCopy
