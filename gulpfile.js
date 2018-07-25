@@ -44,6 +44,11 @@ function css() {
     .pipe(browserSync.stream());
 }
 
+function favicon() {
+  return gulp.src('favicon.ico')
+  .pipe(gulp.dest('./dist'))
+}
+
 function img() {
   return gulp.src('img/*.*')
     .pipe(gulp.dest('dist/img'))
@@ -59,7 +64,7 @@ function fonts(){
 }
 
 
-const build = gulp.series(clean, gulp.parallel(html, css, img, fonts));
+const build = gulp.series(clean, gulp.parallel(html, css, img, fonts, favicon));
 gulp.task('build', build);
 
 const deploy = gulp.series(build, function () {
