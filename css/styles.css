@@ -84,6 +84,7 @@ h1,
 h2,
 h3 {
   text-transform: uppercase;
+  white-space: nowrap;
   font-family: 'Conv_MyriadPro-Bold';
 }
 body {
@@ -96,15 +97,15 @@ body {
   grid-gap: 7%;
   grid-template-columns: 0.649842271293375fr 1fr;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1100px) {
   .wrapper {
-    width: 70%;
+    width: 90%;
   }
 }
-@media screen and (max-width: 892px) {
+@media screen and (max-width: 900px) {
   .wrapper {
     grid-template-columns: 1fr;
-    width: 90%;
+    width: 94%;
   }
 }
 .contact__head:before {
@@ -147,8 +148,9 @@ body {
   margin-top: 30px;
   position: relative;
   left: 10px;
+  text-transform: uppercase;
 }
-@media screen and (max-width: 892px) {
+@media screen and (max-width: 900px) {
   .intro {
     left: 0;
   }
@@ -159,15 +161,22 @@ body {
   font-size: 54px;
   letter-spacing: 2px;
   font-weight: 100;
-  line-height: 0px;
-  margin-top: 72px;
+  line-height: 100%;
+  margin-top: 46px;
 }
 .intro__surname {
   text-align: center;
   font-weight: bold;
   font-size: 63px;
-  margin-top: 16px;
+  margin-top: 1px;
   letter-spacing: -1px;
+  line-height: 77%;
+  font-family: 'Conv_MyriadPro-Bold';
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
+  word-break: break-word;
+  hyphens: auto;
 }
 .intro__profession {
   text-align: center;
@@ -182,95 +191,6 @@ body {
   margin-top: -13px;
   font-size: 16px;
   line-height: 1.184em;
-}
-.contact {
-  margin-top: 34px;
-}
-.contact__list {
-  margin-top: 29px;
-  display: grid;
-  grid-gap: 30px 10px;
-  letter-spacing: 0.6px;
-  grid-template-columns: 1fr 2.35fr;
-}
-.contact__key {
-  font-size: 20px;
-  text-transform: uppercase;
-  color: var(--theme-blue);
-  font-weight: 600;
-}
-.contact__value {
-  font-size: 20px;
-}
-.skills {
-  margin-top: 45px;
-}
-.skills__list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  list-style: none;
-}
-.skills__item {
-  margin-bottom: 18px;
-}
-.skills__item .title {
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 23px;
-  letter-spacing: 1.4px;
-  margin-bottom: 8px;
-}
-@media screen and (max-width: 892px) {
-  .education {
-    margin-top: 40px;
-  }
-}
-.education__univer-name {
-  text-transform: uppercase;
-  font-size: 25px;
-}
-.education__title {
-  color: var(--theme-blue);
-}
-.education__item {
-  margin-bottom: 12px;
-}
-.education__desc {
-  margin-top: 5px;
-}
-.experience {
-  margin-top: 54px;
-}
-.experience__list {
-  margin-top: 41px;
-}
-.experience__position {
-  text-transform: uppercase;
-  font-size: 25px;
-}
-.experience__item {
-  margin-bottom: 12px;
-}
-.experience__desc {
-  margin-top: 5px;
-}
-.software {
-  margin-top: 52px;
-}
-.software__list {
-  list-style: none;
-  display: grid;
-  margin: -2px 8px 0;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 22px 80px;
-}
-.software__title {
-  font-weight: 200;
-  font-size: 25px;
-  margin-bottom: 13px;
-  letter-spacing: 0.4px;
-  font-family: 'Conv_MyriadPro-Regular';
 }
 .point {
   display: inline-block;
