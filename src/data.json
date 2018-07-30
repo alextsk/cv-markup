@@ -10,10 +10,10 @@
     "website": "www.yourweb.org"
   },
   "skills": {
-    "creative": 5, 
-    "teamwork": 8, 
-    "innovate": 2, 
-    "communication": 10
+    "creative": 9, 
+    "teamwork": 11, 
+    "innovate": 6, 
+    "communication": 11
   },
   "education" : [
     {
@@ -62,11 +62,11 @@
     }
   ],
   "software" : {
-    "photoshop" : 80,
-    "illustrator" : 70,
-    "indesign" : 13,
-    "dreamweaver" : 30,
-    "after effects" : 35,
-    "html & css" : 90
+    "photoshop" : 95,
+    "dreamweaver" : 87,
+    "illustrator" : 74,
+    "after effects" : 65,
+    "indesign" : 59,
+    "html&css3" : 95
   }
 }
