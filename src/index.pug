@@ -18,8 +18,8 @@ html(lang="en")
             .left-side
                 section.intro
                     .intro__mugshot
-                    .intro__name=data.name
-                    .intro__surname=data.surname
+                    .intro__name(contenteditable)=data.name
+                    .intro__surname(contenteditable)=data.surname
                     p.intro__profession=data.profession
                 section.profile
                     h2.section-head.profile__head profile 
