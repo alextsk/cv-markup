@@ -1,51 +1,52 @@
+- var data = require("./src/data.json");
+include mixins/points_mix.pug
+include mixins/bar_mix.pug
+include components/definitions/definitions.pug
+include components/rating-dots/rating-dots.pug
+include components/places/places.pug
+include components/rating-bars/rating-bars.pug
 doctype html
 html(lang="en")
-  head
-    link(type='text/css', rel='stylesheet', href='./css/styles.css')
-    title  pageTitle
-  - var data = require("./src/data.json");
-  
-  include mixins/points_mix.pug
-  include mixins/bar_mix.pug
-  include components/definitions/definitions.pug
-  include components/rating-dots/rating-dots.pug
-  include components/places/places.pug
-  include components/rating-bars/rating-bars.pug
+    head
+        meta(charset="utf-8")
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        link(type='text/css', rel='stylesheet', href='./css/styles.css')
+        link(rel="shortcut icon", type="image/x-icon", href="favicon.ico")
+        title=data.surname + ' ' + data.name
+    body
+        .wrapper
+            .left-side
+                section.intro
+                    .intro__mugshot
+                    .intro__name=data.name
+                    .intro__surname=data.surname
+                    p.intro__profession=data.profession
+                section.profile
+                    h2.section-head.profile__head profile 
+                    p.profile__description=data.profileCopy
+                         
+                section.contact
+                    h2.section-head.contact__head contact
+                    +definitions(data.contacts, "contact")
 
-  body
-    .wrapper
-      .left-side
-        section.intro
-          .intro__mugshot
-          h1.intro__name Name here
-          h1.intro__surname Surname
-          P.intro__profession graphic designer
-        section.profile
-          h2.section-head.profile__head profile 
-          p.profile__description=data.profileCopy
-             
-        section.contact
-          h2.section-head.contact__head contact
-          +definitions(data.contacts, "contact")
+                section.skills
+                    h2.section-head.skills__head skills
+                    +ratingDots(data.skills, "skills")
+                    
+            .right-side
+                section.education
+                    h2.section-head.education__head education
+                    - var derived = data.education.map( i => ({title: i.degree, subtitle: i.univer, interval : i.interval, copy: i.copy}));
+                    +places(derived, "education" )(title='emph')
+                    
+                 
+                section.experience
+                    h2.section-head.experience__head experience
+                    - var derived = data.experience.map( i => ({title: i.company, subtitle: i.job, interval : i.interval, copy: i.copy}));
+                    +places(derived, "education")
+                    
 
-        section.skills
-          h2.section-head.skills__head skills
-          +ratingDots(data.skills, "skills")
-          
-      .right-side
-        section.education
-          h2.section-head.education__head education
-          - var derived = data.education.map( i => ({title: i.degree, subtitle: i.univer, interval : i.interval, copy: i.copy}));
-          +places(derived, "education" )(title='emph')
-          
-         
-        section.experience
-          h2.section-head.experience__head experience
-          - var derived = data.experience.map( i => ({title: i.company, subtitle: i.job, interval : i.interval, copy: i.copy}));
-          +places(derived, "education")
-          
-
-        section.software
-          h2.section-head.software__head software
-          +ratingBars(data.software, "software")
-          
+                section.software
+                    h2.section-head.software__head software
+                    +ratingBars(data.software, "software")
+                    
