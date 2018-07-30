@@ -1,7 +1,7 @@
 mixin definitions(defs, baseClass)
-  - var defStyle = loadStyle("src/components/definitions/definitions.styl", baseClass);
-  style=defStyle
-  each val, key in defs
-    dl(class=baseClass + '__list').list
-      dt(class=baseClass + '__key')=key
-      dd(class=baseClass + '__value')=val
+    - var defStyle = loadStyle("src/components/definitions/definitions.styl", baseClass);
+    style=defStyle
+    each val, key in defs
+        dl(class=baseClass + '__list').list
+            dt(class=baseClass + '__key')=key
+            dd(class=baseClass + '__value')=val
