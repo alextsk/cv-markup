@@ -2,3 +2,4 @@ node_modules/
 dist/
 .publish
 yarn-error.log
+.idea
