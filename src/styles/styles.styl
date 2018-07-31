@@ -26,15 +26,20 @@ body
   padding-top 30px
   
 .wrapper
-  width: 58.5%
-  display: grid 
-  grid-gap: 7%
+  width 58.5%
+  display grid 
+  grid-gap 7%
   grid-template-columns: 0.6498422712933754fr 1fr
   @media screen and (max-width: $md_breakpoint)
     width 90%
   @media screen and (max-width: $sm_breakpoint)
-    grid-template-columns: 1fr
-    width: 94%
+    grid-template-columns 1fr
+    width 94%
+      
+  &__intro
+    margin-top 30px
+    position relative
+    left 10px
     
   &__skills 
     margin-top 45px
@@ -68,32 +73,7 @@ body
 .experience__head:before
   background-image: url(../img/experience.svg)  
 
-
-.intro__mugshot
-  margin 0 auto
-  width: 200px
-  height: 200px
-  background-color var(--theme-blue)
-  border-radius 50%
-  position relative
-  &:before
-    content ""
-    position absolute
-    width 230px
-    height 230px
-    border-radius 50%
-    left -16px
-    top -16px
-    border 1px solid var(--theme-blue)
-    
-
-
-
-  
 .intro
-  margin-top 30px
-  position relative
-  left 10px
   text-transform uppercase
   @media screen and (max-width: $sm_breakpoint)
     left 0
@@ -124,14 +104,29 @@ body
     margin-top 15px
     text-transform uppercase
     font-family 'Conv_MyriadPro-Bold'
-  
+  &__mugshot
+    margin 0 auto
+    width: 200px
+    height: 200px
+    background-color var(--theme-blue)
+    border-radius 50%
+    position relative
+    &:before
+      content ""
+      position absolute
+      width 230px
+      height 230px
+      border-radius 50%
+      left -16px
+      top -16px
+      border 1px solid var(--theme-blue)
+    
 .profile
   margin-top 72px
   &__description
     margin-top -13px
     font-size 16px
     line-height 1.184em
-
 
 .point 
   display inline-block

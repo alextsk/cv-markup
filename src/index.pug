@@ -15,8 +15,8 @@ html(lang="en")
         title=data.surname + ' ' + data.name
     body
         .wrapper
-            .left-side
-                section.intro
+            .wrapper__left-side
+                section.intro.wrapper__intro
                     .intro__mugshot
                     .intro__name(contenteditable)=data.name
                     .intro__surname(contenteditable)=data.surname
@@ -33,7 +33,7 @@ html(lang="en")
                     h2.section-head.skills__head skills
                     +ratingDots(data.skills, "skills")
                     
-            .right-side
+            .wrapper__right-side
                 section.education.wrapper__education
                     h2.section-head.education__head education
                     - var derived = data.education.map( i => ({title: i.degree, subtitle: i.univer, interval : i.interval, copy: i.copy}));
