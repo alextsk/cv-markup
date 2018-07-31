@@ -43,7 +43,7 @@ html(lang="en")
                 section.experience.wrapper__experience
                     h2.section-head.experience__head experience
                     - var derived = data.experience.map( i => ({title: i.company, subtitle: i.job, interval : i.interval, copy: i.copy}));
-                    +places(derived, "education")
+                    +places(derived, "experience")
                     
 
                 section.software.wrapper__software

@@ -1,5 +1,5 @@
 mixin places(arr, baseClass)
-    ul.education__list.bullet-list
+    ul(class=baseClass + "__list").bullet-list
         - var mod = attributes && attributes.title==="emph" ? "--blue" : "";
         - var defStyle = loadStyle("src/components/places/places.styl", baseClass);
         style=defStyle
