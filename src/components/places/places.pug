@@ -1,11 +1,14 @@
 mixin places(arr, baseClass)
-    ul.education__list.bullet-list
-        - var mod = attributes && attributes.title==="emph" ? "--blue" : "";
-        - var defStyle = loadStyle("src/components/places/places.styl", baseClass);
+    - var mod = attributes && attributes.title==="emph" ? "--blue" : "";
+    - var defStyle = loadStyle("src/components/places/places.styl", baseClass);
+    div(class=baseClass + "__list")
         style=defStyle
-        each val in arr
-            li(class=baseClass + "__item").bullet-list__item
-                h3(class=baseClass + "__title", class=mod ? baseClass + "__title" + mod : '').bullet-list__title=val.title
-                .bullet-list__interval=val.interval
-                div(class=baseClass + "__subtitle")=val.subtitle
-                div(class=baseClass + "__desc")=val.copy
+        ul.bullet-list
+            each val in arr
+                li(class=baseClass + "__item")
+                    div.bullet-list__item
+                        div(class=baseClass + "__title", class=mod ? baseClass + "__title" + mod : '')
+                            h3.bullet-list__title=val.title
+                        .bullet-list__interval=val.interval
+                        div(class=baseClass + "__subtitle")=val.subtitle
+                        div(class=baseClass + "__desc")=val.copy
