@@ -1,14 +1,12 @@
-mixin places(arr, baseClass)
-    - var mod = attributes && attributes.title==="emph" ? "--blue" : "";
-    - var defStyle = loadStyle("src/components/places/places.styl", baseClass);
-    div(class=baseClass + "__list")
-        style=defStyle
+mixin places(arr)
+    - var mod = attributes && attributes.title==="emph" ? "blue" : "";
+    .places__list
         ul.bullet-list
             each val in arr
-                li(class=baseClass + "__item")
-                    div.bullet-list__item
-                        div(class=baseClass + "__title", class=mod ? baseClass + "__title" + mod : '')
+                li.places__item
+                    .bullet-list__item
+                        .places__title(class=mod ? `places__title--${mod}` : '')
                             h3.bullet-list__title=val.title
                         .bullet-list__interval=val.interval
-                        div(class=baseClass + "__subtitle")=val.subtitle
-                        div(class=baseClass + "__desc")=val.copy
+                        .places__subtitle=val.subtitle
+                        .places__desc=val.copy

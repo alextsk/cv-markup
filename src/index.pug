@@ -7,6 +7,7 @@ include components/rating-dots/rating-dots.pug
 include components/places/places.pug
 include components/rating-bars/rating-bars.pug
 include components/profile/profile.pug
+
 doctype html
 html(lang="en")
     head
@@ -42,15 +43,15 @@ html(lang="en")
                     section.education
                         .education__head
                             h2.section-head education
-                        - var derived = data.education.map( i => ({title: i.degree, subtitle: i.univer, interval : i.interval, copy: i.copy}));
-                        +places(derived, "education")(title='emph')
+                        - var edu = data.education.map( i => ({title: i.degree, subtitle: i.univer, interval : i.interval, copy: i.copy}));
+                        +places(edu)(title='emph')
                     
                 .wrapper__experience
                     section.experience
                         .experience__head
                             h2.section-head experience
-                        - var derived = data.experience.map( i => ({title: i.company, subtitle: i.job, interval : i.interval, copy: i.copy}));
-                        +places(derived, "experience")
+                        - var exp = data.experience.map( i => ({title: i.company, subtitle: i.job, interval : i.interval, copy: i.copy}));
+                        +places(exp)
                     
                 .wrapper__software
                     .wrapper__software
