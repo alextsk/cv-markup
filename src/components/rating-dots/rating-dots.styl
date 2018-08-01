@@ -1,16 +1,15 @@
- baseName = external
+@require '../points/points.styl'
 
-.{baseName} 
-  &__list
-    display flex
-    flex-direction column
-    align-items center
-    list-style none   
+.rating-dots 
+  display flex
+  flex-direction column
+  align-items center
+  list-style none   
   &__item
     margin-bottom 1.125rem
-    .title 
-      text-transform uppercase
-      text-align center
-      font-size 1.4375rem
-      letter-spacing .0875rem
-      margin-bottom .5rem
+  &__title 
+    text-transform uppercase
+    text-align center
+    font-size 1.4375rem
+    letter-spacing .0875rem
+    margin-bottom .5rem

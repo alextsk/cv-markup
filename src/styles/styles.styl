@@ -2,6 +2,10 @@
 @require 'bullet-list'
 @require 'section-head'
 @require '../components/person/person.styl'
+@require '../components/rating-dots/rating-dots.styl'
+@require '../components/rating-bars/rating-bars.styl'
+
+
 // @require '../components/definitions/definitions.styl'
 
 :root 
@@ -84,19 +88,3 @@ body
     letter-spacing: -0.29px;
 
 
-.point 
-  display inline-block
-  width 1.125rem
-  height 1.125rem
-  margin-right .5625rem
-  border-radius 50%
-  background-color #e6e6e6  
-  &.active
-    background-color #3d6cb0
-    
-.bar 
-  height 1.375rem
-  background-color #e6e6e6
-  &__percent 
-    background-color #3d6cb0
-    height 100%

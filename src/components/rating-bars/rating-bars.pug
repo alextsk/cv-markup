@@ -1,11 +1,10 @@
 include ../bar/bar.pug
 
-mixin ratingBars(arr, baseClass)
-    - var defStyle = loadStyle("src/components/rating-bars/rating-bars.styl", baseClass);
-    style=defStyle
-    ul(class=baseClass + "__list")
+mixin ratingBars(arr)
+    ul.rating-bars
         each val, key in arr
-            li
-                h3(class=baseClass + "__title")=key
-                .graph 
+            li.rating-bars__item
+              .rating
+                h3.rating__title=key
+                .rating__graph 
                     +bar(val)
