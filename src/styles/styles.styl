@@ -7,9 +7,6 @@
 @require '../components/definitions/definitions.styl'
 @require '../components/places/places.styl'
 
-
-// @require '../components/definitions/definitions.styl'
-
 :root 
   --theme-blue #056CB4
   
@@ -30,18 +27,18 @@ body
   font-family 'Conv_MyriadPro-Regular'
   display flex
   justify-content center
-  padding-top 1.875rem
+  padding 1.875rem 0
   
 .wrapper
-  width 58.5%
+  width 90%
   display grid 
   grid-gap 7%
-  grid-template-columns: 0.6498422712933754fr 1fr
-  @media screen and (max-width: $md_breakpoint)
-    width 90%
-  @media screen and (max-width: $sm_breakpoint)
-    grid-template-columns 1fr
-    width 94%
+  @media screen and (min-width: $sm_breakpoint)
+    grid-template-columns: 0.6498422712933754fr 1fr
+    width 85%
+  @media screen and (min-width: $md_breakpoint)
+    grid-template-columns: 0.6498422712933754fr 1fr
+    width 75%
       
   &__intro
     margin-top 1.875rem
