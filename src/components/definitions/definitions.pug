@@ -1,7 +1,5 @@
-mixin definitions(defs, baseClass)
-    - var defStyle = loadStyle("src/components/definitions/definitions.styl", baseClass);
-    style=defStyle
+mixin definitions(defs)
     each val, key in defs
-        dl(class=`${baseClass}__list`)
-            dt(class=`${baseClass}__key`)=key
-            dd(class=`${baseClass}__value`)=val
+        dl.definitions__list
+            dt.definitions__key=key
+            dd.definitions__value=val
