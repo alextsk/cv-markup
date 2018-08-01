@@ -6,6 +6,7 @@ include components/definitions/definitions.pug
 include components/rating-dots/rating-dots.pug
 include components/places/places.pug
 include components/rating-bars/rating-bars.pug
+include components/profile/profile.pug
 doctype html
 html(lang="en")
     head
@@ -24,7 +25,7 @@ html(lang="en")
                     section.profile
                         .profile__head
                             h2.section-head profile 
-                        p.profile__description=data.profileCopy
+                        +profileCopy(data.profileCopy)
                 .wrapper__contact
                     section.contact
                         .contact__head
