@@ -1,11 +1,11 @@
-include ../../mixins/points_mix.pug
+include ../points/points.pug
 
 mixin ratingDots(arr, baseClass)
-  - var defStyle = loadStyle("src/components/rating-dots/rating-dots.styl", baseClass);
-  style=defStyle
-  ul.skills__list
-    each val, key in arr
-      li(class=baseClass + "__item")
-        .title=key
-        .graph 
-          +points(val, 12)
+    - var defStyle = loadStyle("src/components/rating-dots/rating-dots.styl", baseClass);
+    style=defStyle
+    ul.skills__list
+        each val, key in arr
+            li(class=baseClass + "__item")
+                .title=key
+                .graph 
+                    +points(val, 12)

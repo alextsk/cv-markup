@@ -1,6 +1,6 @@
-{
-  "name" : "name here",
-  "surname" : "surname",
+{ 
+  "name" : "Constantine",
+  "surname" : "Constantinopolski",
   "profession": "graphic designer",
   "profileCopy" : "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.",
   "contacts" : {
@@ -10,10 +10,10 @@
     "website": "www.yourweb.org"
   },
   "skills": {
-    "creative": 5, 
-    "teamwork": 8, 
-    "innovate": 2, 
-    "communication": 10
+    "creative": 9, 
+    "teamwork": 11, 
+    "innovate": 6, 
+    "communication": 11
   },
   "education" : [
     {
@@ -59,20 +59,14 @@
       "interval" : "Feb 2011 - Jun 2014", 
       "company": "company name",
       "copy" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque arcu, efficitur ut mi ut, feugiat efficitur nulla. Sed vel magna in arcu maximus egestas. Suspendisse consectetur sollicitudin lacus, ut tempus lorem hendrerit ut."
-    },
-    {
-      "job": "YOUR JOB HERE", 
-      "interval" : "Feb 2011 - Jun 2014", 
-      "company": "company name",
-      "copy" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce neque arcu, efficitur ut mi ut, feugiat efficitur nulla. Sed vel magna in arcu maximus egestas. Suspendisse consectetur sollicitudin lacus, ut tempus lorem hendrerit ut."
     }
   ],
   "software" : {
-    "photoshop" : 80,
-    "illustrator" : 70,
-    "indesign" : 13,
-    "dreamweaver" : 30,
-    "after effects" : 35,
-    "html & css" : 90
+    "photoshop" : 95,
+    "dreamweaver" : 87,
+    "illustrator" : 74,
+    "after effects" : 65,
+    "indesign" : 59,
+    "html&css3" : 95
   }
 }

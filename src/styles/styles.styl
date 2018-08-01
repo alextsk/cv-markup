@@ -18,22 +18,48 @@ h1, h2, h3
   text-transform uppercase
   white-space nowrap
   font-family 'Conv_MyriadPro-Bold'
+
 body
   font-family 'Conv_MyriadPro-Regular'
-
+  display flex
+  justify-content center
+  padding-top 30px
   
 .wrapper
-  margin 30px auto 0
-  width: 58.5%
-  display: grid 
-  grid-gap: 7%
+  width 58.5%
+  display grid 
+  grid-gap 7%
   grid-template-columns: 0.6498422712933754fr 1fr
   @media screen and (max-width: $md_breakpoint)
     width 90%
   @media screen and (max-width: $sm_breakpoint)
-    grid-template-columns: 1fr
-    width: 94%
+    grid-template-columns 1fr
+    width 94%
+      
+  &__intro
+    margin-top 30px
+    position relative
+    left 10px
+    
+  &__skills 
+    margin-top 45px
 
+  &__software
+    margin-top 52px
+    
+  &__experience 
+    margin-top: 52px
+
+  &__experience__head
+    margin-bottom 44px
+    
+  &__contact
+    margin-top 34px
+    
+  &__education 
+    @media screen and (max-width: $sm_breakpoint)
+      margin-top 40px
+      
 .contact__head:before
   background-image: url(../img/contact.svg)
 .skills__head:before
@@ -47,29 +73,8 @@ body
 .experience__head:before
   background-image: url(../img/experience.svg)  
 
-
-.intro__mugshot
-  margin 0 auto
-  width: 200px
-  height: 200px
-  background-color var(--theme-blue)
-  border-radius 50%
-  position relative
-  &:before
-    content ""
-    position absolute
-    width 230px
-    height 230px
-    border-radius 50%
-    left -16px
-    top -16px
-    border 1px solid var(--theme-blue)
-    
-      
 .intro
-  margin-top 30px
-  position relative
-  left 10px
+  text-transform uppercase
   @media screen and (max-width: $sm_breakpoint)
     left 0
   &__name
@@ -78,27 +83,50 @@ body
     font-size 54px
     letter-spacing 2px
     font-weight 100
-    line-height 0px
-    margin-top 72px
+    line-height 100%
+    margin-top 46px
   &__surname
     text-align center
     font-weight bold
     font-size 63px
-    margin-top 16px
+    margin-top 1px
     letter-spacing -1px
+    line-height 77%
+    font-family 'Conv_MyriadPro-Bold'
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
+    word-break: break-word;
+    hyphens: auto;
   &__profession
     text-align center
     font-size 25px
+    margin-top 15px
     text-transform uppercase
     font-family 'Conv_MyriadPro-Bold'
-  
+  &__mugshot
+    margin 0 auto
+    width: 200px
+    height: 200px
+    background-color var(--theme-blue)
+    border-radius 50%
+    position relative
+    &:before
+      content ""
+      position absolute
+      width 230px
+      height 230px
+      border-radius 50%
+      left -16px
+      top -16px
+      border 1px solid var(--theme-blue)
+    
 .profile
   margin-top 72px
   &__description
     margin-top -13px
     font-size 16px
     line-height 1.184em
-
 
 .point 
   display inline-block
