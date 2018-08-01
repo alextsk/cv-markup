@@ -4,6 +4,10 @@
   "main": "index.js",
   "repository": "https://github.com/alextsk/cv-markup.git",
   "author": "Alex <user@nomail.com>",
+  "scripts":{
+    "serve" : "gulp",
+    "build" : "gulp build"
+  },
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.24.4",
