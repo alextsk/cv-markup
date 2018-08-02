@@ -23,13 +23,25 @@ demo:
         gulp
       </code>
     </div>
-    in the command shell
+      or, if gulp-cli is not installed globally
+     <div>
+      <code>
+        npm run serve
+      </code>
+    </div>
+
   </li>
   <li>
     to build without running  
     <div>
       <code>
         gulp build
+      </code>
+    </div>
+    or, if gulp-cli is not installed globally
+     <div>
+      <code>
+        npm run build
       </code>
     </div>
   </li>
