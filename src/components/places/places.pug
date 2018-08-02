@@ -1,12 +1,9 @@
 mixin places(arr)
     - var mod = attributes && attributes.title==="emph" ? "blue" : "";
-    .places__list
-        ul.bullet-list
+        ul.places
             each val in arr
                 li.places__item
-                    .bullet-list__item
-                        .places__title(class=mod ? `places__title--${mod}` : '')
-                            h3.bullet-list__title=val.title
-                        .bullet-list__interval=val.interval
-                        .places__subtitle=val.subtitle
-                        .places__desc=val.copy
+                    h3.places__title(class=mod ? `places__title--${mod}` : '')=val.title 
+                    .places__interval=val.interval
+                    .places__subtitle=val.subtitle
+                    .places__desc=val.copy
