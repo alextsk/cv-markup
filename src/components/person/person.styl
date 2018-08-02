@@ -1,0 +1,52 @@
+.person
+  text-transform uppercase
+  @media screen and (max-width: $sm_breakpoint)
+    left 0
+  &__name
+    text-align center
+    font-family 'Conv_MyriadPro-Regular'
+    font-size 3.375rem
+    letter-spacing .0125rem
+    font-weight 100
+    line-height 100%
+    margin-top 2.875rem
+    overflow-wrap break-word
+    word-wrap break-word
+    word-break break-all
+    word-break break-word
+    hyphens auto
+  &__surname
+    text-align center
+    font-weight bold
+    font-size 3.9375rem
+    margin-top .0625rem
+    letter-spacing -.0625rem
+    line-height 77%
+    font-family 'Conv_MyriadPro-Bold'
+    overflow-wrap: break-word
+    word-wrap break-word
+    word-break break-all
+    word-break break-word
+    hyphens auto
+  &__profession
+    text-align center
+    font-size 1.5625rem
+    margin-top .9375rem
+    text-transform uppercase
+    font-family 'Conv_MyriadPro-Bold'
+  &__mugshot
+    margin 0 auto
+    width: 12.5rem
+    height: 12.5rem
+    background-color var(--theme-blue)
+    border-radius 50%
+    position relative
+    &:before
+      content ""
+      position absolute
+      width 14.375rem
+      height 14.375rem
+      border-radius 50%
+      left -1rem
+      top -1rem
+      border .0625rem solid var(--theme-blue)

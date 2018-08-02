@@ -1,4 +1,5 @@
 - var data = require("./src/data.json");
+include components/person/person.pug
 include components/points/points.pug
 include components/bar/bar.pug
 include components/definitions/definitions.pug
@@ -18,10 +19,7 @@ html(lang="en")
             .wrapper__left-side
                 .wrapper__intro
                     section.intro
-                        .intro__mugshot
-                        .intro__name(contenteditable)=data.name
-                        .intro__surname(contenteditable)=data.surname
-                        p.intro__profession=data.profession
+                        +person(data.person)
                 .wrapper__profile
                     section.profile
                         .profile__head
