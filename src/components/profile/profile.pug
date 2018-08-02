@@ -1,2 +1,7 @@
-mixin profileCopy(data)
-  p.profile-copy=data
+include ../section-head/section-head.pug
+
+mixin profile(data)
+    section.profile
+        .profile__head
+            +section-head('profile')  
+        p.profile__copy=data
