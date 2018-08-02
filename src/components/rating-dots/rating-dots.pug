@@ -1,9 +1,9 @@
 include ../points/points.pug
 
-mixin ratingDots(arr, baseClass)
+mixin ratingDots(ratingsList)
     ul.rating-dots
-        each val, key in arr
+        each ratingValue, ratingName in ratingsList
             li.rating-dots__item
-                .rating-dots__title=key
+                .rating-dots__item-title=ratingName
                 .rating-dots__graph 
-                    +points(val, 12)
+                    +points(ratingValue, 12)
