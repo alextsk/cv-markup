@@ -1,0 +1,10 @@
+include ../places/places.pug
+include ../section-head/section-head.pug
+
+mixin experience(data)
+    section.experience
+        .experience__head
+            +section-head('experience')
+        .experience__body
+            - var exp = data.map( i => ({title: i.company, subtitle: i.job, interval : i.interval, copy: i.copy}));
+            +places(exp)

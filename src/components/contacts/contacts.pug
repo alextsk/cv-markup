@@ -1,0 +1,8 @@
+include ../definitions/definitions.pug
+include ../section-head/section-head.pug
+
+mixin contacts(data) 
+    section.contact
+        .contact__head
+            +section-head('contact')
+        +definitions(data)

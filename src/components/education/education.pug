@@ -1,0 +1,10 @@
+include ../places/places.pug
+include ../section-head/section-head.pug
+
+mixin education(data)
+    section.education
+        .education__head
+            +section-head('education')
+        .education__body
+            - var edu = data.map( i => ({title: i.degree, subtitle: i.univer, interval : i.interval, copy: i.copy}));
+            +places(edu)(title='emph')

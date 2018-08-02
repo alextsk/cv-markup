@@ -1,17 +1,17 @@
 @require 'fonts'
 
-@require 'section-head'
+@require 'variables'
+@require '../components/section-head/section-head.styl'
+@require '../components/wrapper/wrapper.styl'
 @require '../components/person/person.styl'
 @require '../components/rating-dots/rating-dots.styl'
 @require '../components/rating-bars/rating-bars.styl'
 @require '../components/definitions/definitions.styl'
 @require '../components/places/places.styl'
+@require '../components/experience/experience.styl'
+@require '../components/education/education.styl'
 
-:root 
-  --theme-blue #056CB4
-  
-$md_breakpoint = 1100px
-$sm_breakpoint = 900px
+
 
 *
   box-sizing border-box
@@ -29,44 +29,6 @@ body
   justify-content center
   padding 1.875rem 0
   
-.wrapper
-  width 90%
-  display grid 
-  grid-gap 7%
-  @media screen and (min-width: $sm_breakpoint)
-    grid-template-columns: 0.6498422712933754fr 1fr
-    width 85%
-  @media screen and (min-width: $md_breakpoint)
-    grid-template-columns: 0.6498422712933754fr 1fr
-    width 75%
-      
-  &__intro
-    margin-top 1.875rem
-    position relative
-    left .625rem
-    
-  &__profile
-    margin-top 4.5rem
-    
-  &__skills 
-    margin-top 2.8125rem
-
-  &__software
-    margin-top 3.25rem
-    
-  &__experience 
-    margin-top: 3.25rem
-
-  &__experience__head
-    margin-bottom 2.75rem
-    
-  &__contact
-    margin-top 2.125rem
-    
-  &__education 
-    @media screen and (max-width: $sm_breakpoint)
-      margin-top 2.5rem
-      
 .contact__head:before
   background-image: url(../img/contact.svg)
 .skills__head:before
