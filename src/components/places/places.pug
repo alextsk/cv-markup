@@ -1,9 +1,9 @@
-mixin places(arr)
-    - var mod = attributes && attributes.title==="emph" ? "blue" : "";
+mixin places(placesList)
+    - var themeModifier = attributes && attributes.title==="emphasized" ? "blue" : "";
         ul.places
-            each val in arr
+            each place in placesList
                 li.places__item
-                    h3.places__title(class=mod ? `places__title--${mod}` : '')=val.title 
-                    .places__interval=val.interval
-                    .places__subtitle=val.subtitle
-                    .places__desc=val.copy
+                    h3.places__title(class=themeModifier ? `places__title--${themeModifier}` : '')=place.title 
+                    .places__interval=place.interval
+                    .places__subtitle=place.subtitle
+                    .places__desc=place.copy
