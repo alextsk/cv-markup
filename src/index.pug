@@ -43,15 +43,17 @@ html(lang="en")
                     section.education
                         .education__head
                             h2.section-head education
-                        - var edu = data.education.map( i => ({title: i.degree, subtitle: i.univer, interval : i.interval, copy: i.copy}));
-                        +places(edu)(title='emph')
+                        .education__body
+                            - var edu = data.education.map( i => ({title: i.degree, subtitle: i.univer, interval : i.interval, copy: i.copy}));
+                            +places(edu)(title='emph')
                     
                 .wrapper__experience
                     section.experience
                         .experience__head
                             h2.section-head experience
-                        - var exp = data.experience.map( i => ({title: i.company, subtitle: i.job, interval : i.interval, copy: i.copy}));
-                        +places(exp)
+                        .experience__body
+                            - var exp = data.experience.map( i => ({title: i.company, subtitle: i.job, interval : i.interval, copy: i.copy}));
+                            +places(exp)
                     
                 .wrapper__software
                     .wrapper__software
