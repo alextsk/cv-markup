@@ -1,0 +1,27 @@
+include ../person/person.pug
+include ../profile/profile.pug
+include ../education/education.pug
+include ../experience/experience.pug
+include ../software/software.pug
+include ../contacts/contacts.pug
+include ../skills/skills.pug
+
+mixin wrapper(pageData)
+    .wrapper
+        .wrapper__left-side
+            .wrapper__intro
+                +person(pageData.person)
+            .wrapper__profile
+                +profile(pageData.profileCopy)
+            .wrapper__contacts
+                +contacts(pageData.contacts)
+            .wrapper__skills
+                +skills(pageData.skills)
+                
+        .wrapper__right-side
+            .wrapper__education
+                +education(pageData.education)   
+            .wrapper__experience
+                +experience(pageData.experience)  
+            .wrapper__software
+                +software(pageData.software)

@@ -1,10 +1,9 @@
 include ../bar/bar.pug
 
-mixin ratingBars(arr)
+mixin ratingBars(ratingsList)
     ul.rating-bars
-        each val, key in arr
+        each ratingValue, ratingName in ratingsList
             li.rating-bars__item
-              .rating
-                h3.rating__title=key
-                .rating__graph 
-                    +bar(val)
+                h3.rating-bars__item-title=ratingName
+                .rating-bars__graph 
+                    +bar(ratingValue)

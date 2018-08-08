@@ -1,0 +1,8 @@
+include ../rating-bars/rating-bars.pug
+include ../section-head/section-head.pug
+
+mixin software(softwareCompetenciesList)
+    section.software
+        .software__head
+            +section-head('software')
+        +ratingBars(softwareCompetenciesList)

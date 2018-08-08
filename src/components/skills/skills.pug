@@ -1,0 +1,8 @@
+include ../rating-dots/rating-dots.pug
+include ../section-head/section-head.pug
+
+mixin skills(skillsList)
+    section.skills
+        .skills__head
+            +section-head('skills')
+        +ratingDots(skillsList)
