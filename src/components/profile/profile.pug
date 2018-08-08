@@ -1,7 +1,9 @@
 include ../section-head/section-head.pug
 
-mixin profile(data)
+
+mixin profile(copy)
     section.profile
         .profile__head
             +section-head('profile')  
-        p.profile__copy=data
+        p.profile__copy=copy
+

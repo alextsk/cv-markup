@@ -1,7 +1,7 @@
-mixin points(num, of)
-    - for (var x = 0; x < of; x++)
-        if num > 0
+mixin points(numberOfPoints, maxNumber)
+    - for (var x = 0; x < maxNumber; x++)
+        if numberOfPoints > 0
             span.point.point--active
         else
             span.point 
-        - num--
+        - numberOfPoints--

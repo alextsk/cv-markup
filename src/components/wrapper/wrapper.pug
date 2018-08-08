@@ -6,22 +6,23 @@ include ../software/software.pug
 include ../contacts/contacts.pug
 include ../skills/skills.pug
 
-mixin wrapper(data)
+mixin wrapper(pageData)
     .wrapper
         .wrapper__left-side
             .wrapper__intro
-                +person(data.person)
+                +person(pageData.person)
             .wrapper__profile
-                +profile(data.profileCopy)
+                +profile(pageData.profileCopy)
             .wrapper__contacts
-                +contacts(data.contacts)
+                +contacts(pageData.contacts)
             .wrapper__skills
-                +skills(data.skills)
+                +skills(pageData.skills)
                 
         .wrapper__right-side
             .wrapper__education
-                +education(data.education)   
+                +education(pageData.education)   
             .wrapper__experience
-                +experience(data.experience)  
+                +experience(pageData.experience)  
             .wrapper__software
-                +software(data.software)
+                +software(pageData.software)
+
