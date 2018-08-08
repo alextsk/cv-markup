@@ -1,12 +1,5 @@
 - var data = require("./src/data.json");
-include components/person/person.pug
-include components/points/points.pug
-include components/bar/bar.pug
-include components/definitions/definitions.pug
-include components/rating-dots/rating-dots.pug
-include components/places/places.pug
-include components/rating-bars/rating-bars.pug
-include components/profile/profile.pug
+include components/wrapper/wrapper.pug
 
 doctype html
 html(lang="en")
@@ -15,48 +8,7 @@ html(lang="en")
         meta(name='viewport', content='width=device-width, initial-scale=1.0')
         link(type='text/css', rel='stylesheet', href='./css/styles.css')
         link(rel="shortcut icon", type="image/x-icon", href="favicon.ico")
-        title=data.surname + ' ' + data.name
+        title=data.person.surname + ' ' + data.person.name
     body
-        .wrapper
-            .wrapper__left-side
-                .wrapper__intro
-                    section.intro
-                        +person(data.person)
-                .wrapper__profile
-                    section.profile
-                        .profile__head
-                            h2.section-head profile 
-                        +profileCopy(data.profileCopy)
-                .wrapper__contact
-                    section.contact
-                        .contact__head
-                            h2.section-head contact
-                        +definitions(data.contacts)
-                .wrapper__skills
-                    section.skills
-                        .skills__head
-                            h2.section-head skills
-                        +ratingDots(data.skills)
-                    
-            .wrapper__right-side
-                .wrapper__education
-                    section.education
-                        .education__head
-                            h2.section-head education
-                        - var edu = data.education.map( i => ({title: i.degree, subtitle: i.univer, interval : i.interval, copy: i.copy}));
-                        +places(edu)(title='emph')
-                    
-                .wrapper__experience
-                    section.experience
-                        .experience__head
-                            h2.section-head experience
-                        - var exp = data.experience.map( i => ({title: i.company, subtitle: i.job, interval : i.interval, copy: i.copy}));
-                        +places(exp)
-                    
-                .wrapper__software
-                    .wrapper__software
-                        section.software
-                            .software__head
-                                h2.section-head software
-                            +ratingBars(data.software)
-                    
+        +wrapper(data)
+        
