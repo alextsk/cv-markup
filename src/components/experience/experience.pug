@@ -8,3 +8,4 @@ mixin experience(experienceData)
         .experience__body
             - var experienceDataNormalized = experienceData.map( i => ({title: i.company, subtitle: i.job, interval : i.interval, copy: i.copy}));
             +places(experienceDataNormalized)
+
