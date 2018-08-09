@@ -3,7 +3,7 @@ include ../profile/profile.pug
 include ../education/education.pug
 include ../experience/experience.pug
 include ../software/software.pug
-include ../contacts/contacts.pug
+include ../contact/contact.pug
 include ../skills/skills.pug
 
 mixin wrapper(pageData)
@@ -14,7 +14,7 @@ mixin wrapper(pageData)
             .wrapper__profile
                 +profile(pageData.profileCopy)
             .wrapper__contacts
-                +contacts(pageData.contacts)
+                +contact(pageData.contacts)
             .wrapper__skills
                 +skills(pageData.skills)
                 
