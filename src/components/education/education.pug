@@ -1,6 +1,7 @@
 include ../places/places.pug
 include ../section-head/section-head.pug
 
+
 mixin education(educationData)
     section.education
         .education__head
@@ -8,3 +9,4 @@ mixin education(educationData)
         .education__body
             - var educationDataNormalized = educationData.map( i => ({title: i.degree, subtitle: i.univer, interval : i.interval, copy: i.copy}));
             +places(educationDataNormalized)(title='emphasized')
+
