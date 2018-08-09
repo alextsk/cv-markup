@@ -5,7 +5,7 @@ include ../section-head/section-head.pug
 mixin education(educationData)
     section.education
         .education__head
-            +section-head('education')
+            +section-head('education', '../img/education.svg')
         .education__body
             - var educationDataNormalized = educationData.map( i => ({title: i.degree, subtitle: i.univer, interval : i.interval, copy: i.copy}));
             +places(educationDataNormalized)(title='emphasized')

@@ -4,7 +4,7 @@ include ../section-head/section-head.pug
 mixin experience(experienceData)
     section.experience
         .experience__head
-            +section-head('experience')
+            +section-head('experience', '../img/experience.svg')
         .experience__body
             - var experienceDataNormalized = experienceData.map( i => ({title: i.company, subtitle: i.job, interval : i.interval, copy: i.copy}));
             +places(experienceDataNormalized)
