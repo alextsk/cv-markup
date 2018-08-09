@@ -1,5 +1,5 @@
-mixin definitions(personalInfo)
+mixin definitions(definitionsList)
     dl.definitions
-        each contactValue, contactName in personalInfo
-            dt.definitions__key=contactName
-            dd.definitions__value=contactValue
+        each value, name in definitionsList
+            dt.definitions__key=name
+            dd.definitions__value=value
