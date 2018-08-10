@@ -1,3 +1,3 @@
-mixin section-head(headerText)
-    h2.section-head=headerText
+mixin section-head(headerText, headerImage='../img/profile.svg')
+    h2.section-head(style=`--header-image: url(${headerImage})`)=headerText
 
