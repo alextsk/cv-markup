@@ -1,10 +1,10 @@
 include ../section-head/section-head.pug
 
 
-mixin profile(copy)
+mixin profile({ regular, bold })
     section.profile
         .profile__head
             +section-head('profile', '../img/profile.svg')  
-        p.profile__copy=copy.regular
-          b.profile__copy-highlight=copy.bold
+        p.profile__copy=regular
+          b.profile__copy-highlight=bold
 

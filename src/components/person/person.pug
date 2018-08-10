@@ -1,6 +1,6 @@
-mixin person(data)
+mixin person({ name, surname, profession })
     .person
         .person__mugshot
-        .person__name(contenteditable)=data.name
-        .person__surname(contenteditable)=data.surname
-        p.person__profession=data.profession
+        .person__name(contenteditable)=name
+        .person__surname(contenteditable)=surname
+        p.person__profession=profession
