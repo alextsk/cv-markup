@@ -5,5 +5,6 @@ mixin profile(copy)
     section.profile
         .profile__head
             +section-head('profile', '../img/profile.svg')  
-        p.profile__copy=copy
+        p.profile__copy=copy.regular
+          b.profile__copy-highlight=copy.bold
 
