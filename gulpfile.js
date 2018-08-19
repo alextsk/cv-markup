@@ -52,7 +52,7 @@ function favicon() {
 }
 
 function img() {
-  return gulp.src('img/*.*')
+  return gulp.src('src/img/*.*')
     .pipe(gulp.dest('dist/img'))
 }
  
@@ -61,7 +61,7 @@ function clean () {
 }
 
 function fonts(){
-  return gulp.src('fonts/*.*')
+  return gulp.src('src/fonts/*.*')
     .pipe(gulp.dest('dist/fonts'))
 }
 
