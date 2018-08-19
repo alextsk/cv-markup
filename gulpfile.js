@@ -11,6 +11,7 @@ var path = require('path');
 var gulpDeploy      = require('gulp-gh-pages');
 var browserSync = require('browser-sync').create();
 var del = require('del');
+var concatCss = require('gulp-concat-css');
 
 function html() {
   return gulp.src('src/*.pug')
@@ -37,8 +38,9 @@ function html() {
 }
 
 function css() {
-  return gulp.src('src/styles/*.styl')
+  return gulp.src(['src/styles/*.styl', 'src/components/**/*.styl'])
     .pipe(stylus())
+    .pipe(concatCss("bundle.css"))
 //    .pipe(minifyCSS())
     .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.stream());
