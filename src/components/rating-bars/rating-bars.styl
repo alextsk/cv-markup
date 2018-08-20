@@ -1,11 +1,15 @@
 @require '../bar/bar.styl'
+@require '../../styles/variables'
+
 
 .rating-bars
   list-style none
   display grid
   margin -.125rem .5rem 0
-  grid-template-columns 1fr 1fr
   grid-gap  1.375rem 5rem
+  grid-template-columns auto
+  @media screen and (min-width: $sm_breakpoint)
+    grid-template-columns 1fr 1fr
   &__item-title
     font-weight 200
     font-size 1.6rem
