@@ -1,8 +1,8 @@
 mixin points(numberOfPoints, maxNumber)
     .points
-        - for (var x = 0; x < maxNumber; x++)
-                if numberOfPoints > 0
+        - for (var i = 0; i < maxNumber; i++)
+                if i < numberOfPoints
                     span.points__point.points__point--active
                 else
                     span.points__point 
-                - numberOfPoints--
+                
